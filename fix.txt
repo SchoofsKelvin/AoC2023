@@ -1,4 +1,7 @@
 
+See which commits added text files:
+$ git log --stat -- *.txt
+
 Start an interactive base:
 $ git rebase --root -i
 
