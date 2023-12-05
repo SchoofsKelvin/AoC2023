@@ -1,0 +1,19 @@
+
+Start an interactive base:
+$ git rebase --root -i
+
+Mark the commits that added data files to be edited ('e' or 'edit')
+(text editor opened by above command)
+
+For each commit:
+    Remove the file:
+    $ rm Day1/data_etc
+
+    Amend the commit:
+    $ git commit -a --amend -CHEAD
+    (-a means add all, -CHEAD means reuse commit message from HEAD)
+
+    Continue the rebase
+    $ git rebase --continue
+
+In case a commit has no files to be removed, simply "git rebase --continue"
